@@ -1,3 +1,3 @@
 #!/bin/bash
-product=`expr $num1 \* $num2`
+product=`expr $1 \* $2`
 echo "the product of two numbers is $product"
