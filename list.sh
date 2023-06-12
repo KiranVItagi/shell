@@ -1,4 +1,3 @@
 #!/bin/bash 
-total=`echo total number of files and directories are ls -l | wc -l`
-echo $total
+total=echo "total number of files and directories are ls -l | wc -l"
 
