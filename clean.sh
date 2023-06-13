@@ -1,5 +1,6 @@
 #!/bin/bash
-total=`ls /home/slave1/workspace/job11/shell | wc -l` 
+echo `pwd`
+total=`ls  | wc -l` 
 oldfiles=`expr $total - 2 `
 if [ $oldfiles -gt 0 ]
 then
