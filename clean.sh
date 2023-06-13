@@ -1,8 +1,5 @@
 #!/bin/bash
-echo `pwd`
-total=`ls  | wc -l` 
-oldfiles=`expr $total - 2 `
-if [ $oldfiles -gt 0 ]
-then
-ls -rt | head -$oldfiles | xargs rm -rf
-fi
+ls -lrt | awk -F " " '{print $NF}' | sed '1d' > files
+i=`cat files | wc -l`
+i=`expr $i - 2`
+echo $i
