@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'slave1' } 
     parameters {
-        choice(name: 'number', choices: [ '1', '2', '3' ] )
+        choice(name: 'number1', choices: [ '1', '2', '3' ] )
         string(name: 'words', defaultValue: 'test' )
     }
         stages {
