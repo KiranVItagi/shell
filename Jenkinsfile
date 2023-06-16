@@ -1,5 +1,11 @@
 pipeline {
     agent { label 'slave1' } 
+      properties([
+                        parameters([
+                            choice(
+                                choices: ['ONE', 'TWO'], 
+                                name: 'PARAMETER_01'
+                            )]])
     stages {
         stage('checkout') {
             steps {
