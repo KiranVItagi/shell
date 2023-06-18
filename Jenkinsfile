@@ -1,13 +1,13 @@
 pipeline {
     agent { label 'slave1' } 
     parameters {
-        choice(name: 'number1', choices: [ '1', '2', '3' ] )
-        string(name: 'number', defaultValue: '1' )
+        string(name: 'number1', defaultValue: '1' )
+        string(name: 'number2', defaultValue: '2' )
     }
         stages {
         stage('checkout') {
             steps {
-                sh 'echo $number'
+                sh 'echo `expr $number1 + $number2`'
             }
         }
         stage('testing') {
